@@ -13,14 +13,14 @@ import { AIOutput } from "@/utils/schema";
 import { useUser } from "@clerk/nextjs";
 import moment from "moment";
 
-interface PROPS {
+interface props  {
   params: {
     "template-slug": string;
   };
   slug: string;
 }
 
-function CreateNewContent(props: PROPS) {
+function CreateNewContent(props: props) {
   const selectedTemplate: TEMPLATE | undefined = Templates?.find(
     (item) => item.slug == props.params["template-slug"]
   );
